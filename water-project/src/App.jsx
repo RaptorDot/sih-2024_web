@@ -8,17 +8,10 @@ import Layout from './Layout'
 
 function App() {
   const [count, setCount] = useState(0)
-const router = (
-  createRoutesFromElements(
-    <Route path='/' element={<Layout></Layout>}>
 
-    </Route>
-  )
-)
   return (
 <>
-    <RouterProvider router={router}/>
-    
+
 </>
   )
 }
