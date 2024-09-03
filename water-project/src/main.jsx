@@ -3,14 +3,29 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import Layout from './Layout.jsx'
-import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import Home from './components/Home/Home.jsx'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout/>
+    element: <Layout/>,
+    children:[
+      {
+        path:"",
+        element: <Home/>
+        
+      }
+    ]
   }
 ])
+// const router = createBrowserRouter([
+//   createRoutesFromElements(
+//     <Route path='/' element={<Layout/>}>
+//       {/* <Route path='' element={<Home/>}/> */}
+//     </Route>
+//   )
+// ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
