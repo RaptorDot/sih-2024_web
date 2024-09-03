@@ -3,15 +3,14 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import Layout from './Layout.jsx'
-import { createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 
-const router = (
-  createRoutesFromElements(
-    <Route path='/' element={<Layout></Layout>}>
-      
-    </Route>
-  )
-)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout/>
+  }
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
