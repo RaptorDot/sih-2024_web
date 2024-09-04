@@ -8,7 +8,7 @@ function ArticleCards(prop) {
   return (
     <div class="w-72 h-40 flex flex-col justify-center gap-2 bg-slate-700 rounded-lg shadow p-2">
       <div class="flex gap-2">
-        <img alt="" class="bg-purple-200 w-24 h-24 shrink-0 rounded-lg" />
+        <img src="https://images.unsplash.com/photo-1526599256864-6bedb9d7dfb5?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="bg-purple-200 w-24 h-24 shrink-0 rounded-lg" />
         <div class="flex flex-col text-white">
           <span class="font-bold italic">{prop.title}</span>
           <p class="line-clamp-3">
