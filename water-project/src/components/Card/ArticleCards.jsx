@@ -3,9 +3,8 @@ import useData from "../Contexts/data";
 import { Link } from "react-router-dom";
 
 function ArticleCards(prop) {
-  // console.log(title)
-  // console.log(title)
-  function readArticle() {}
+  
+  console.log(prop)
   return (
     <div class="w-72 h-40 flex flex-col justify-center gap-2 bg-slate-700 rounded-lg shadow p-2">
       <div class="flex gap-2">
@@ -21,7 +20,7 @@ function ArticleCards(prop) {
           </p>
         </div>
       </div>
-      <Link to="/k">
+      <Link to="/articles/k">
       <button
         class="hover:bg-purple-300 bg-neutral-50 font-bold text-indigo-500 rounded p-2"
         onClick={readArticle}
