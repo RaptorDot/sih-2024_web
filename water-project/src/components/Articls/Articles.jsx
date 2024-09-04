@@ -6,9 +6,12 @@ import useData from '../Contexts/data'
 export default function Articles() {
   // console.log(useData())
   return (
-    <div>
+    <div className='items-center place-items-center'>
      {useData().map((e)=>(
-      <ArticleCards key={e.id} info ={e.info} title={e.title}/>
+      <div>
+        <ArticleCards key={e.id} info ={e.info} title={e.title}/>
+        <hr/>
+      </div>
      ))}
     </div>
   )
