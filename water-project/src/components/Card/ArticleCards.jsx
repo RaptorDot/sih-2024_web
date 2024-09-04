@@ -1,5 +1,6 @@
 import React from "react";
 import useData from "../Contexts/data";
+import { Link } from "react-router-dom";
 
 function ArticleCards(prop) {
   // console.log(title)
@@ -20,12 +21,14 @@ function ArticleCards(prop) {
           </p>
         </div>
       </div>
+      <Link to="/k">
       <button
         class="hover:bg-purple-300 bg-neutral-50 font-bold text-indigo-500 rounded p-2"
         onClick={readArticle}
       >
         See more
       </button>
+      </Link>
     </div>
   );
 }
