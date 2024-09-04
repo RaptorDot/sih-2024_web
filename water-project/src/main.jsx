@@ -7,6 +7,7 @@ import Home from './components/Home/Home.jsx'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Articles from './components/Articls/Articles.jsx'
 import Videos from './components/Videos/Videos.jsx'
+import ArticlePage from './components/Articls/ArticlePage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='articles' element={<Articles/>}/>
       <Route path='/videos' element={<Videos/>}/>
+      <Route path='/k' element={<ArticlePage/>}/>
     </Route>
   )
 )
