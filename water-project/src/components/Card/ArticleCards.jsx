@@ -4,6 +4,9 @@ import useData from '../Contexts/data'
 function ArticleCards(prop) {
     // console.log(title)
     // console.log(title)
+    function readArticle(){
+      
+    }
   return (
 <div
   class="w-72 h-40 flex flex-col justify-center gap-2 bg-slate-700 rounded-lg shadow p-2"
@@ -23,6 +26,7 @@ function ArticleCards(prop) {
   </div>
   <button
     class="hover:bg-purple-300 bg-neutral-50 font-bold text-indigo-500 rounded p-2"
+  onClick={readArticle}
   >
     See more
   </button>
