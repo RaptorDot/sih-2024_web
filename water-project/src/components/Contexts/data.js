@@ -1,3 +1,4 @@
+import { createContext, useContext } from "react";
 const data =[
     {
         id: '1',
@@ -37,4 +38,9 @@ const data =[
 
 ]
 
-export default data;
+export const dataContext = createContext(data);
+export const dataContextProvider = dataContext.Provider
+
+export default function useData(){
+    return useContext(dataContext);
+}

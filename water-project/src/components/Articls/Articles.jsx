@@ -1,12 +1,15 @@
 import React from 'react'
 import ArticleCards from '../Card/ArticleCards'
+import useData from '../Contexts/data'
+
 
 export default function Articles() {
+  // console.log(useData())
   return (
     <div>
-     <ArticleCards title = "save water"/>
-     <br/>
-     <ArticleCards title={"how can we save the water"}/>
+     {useData().map((e)=>(
+      <ArticleCards key={e.id} info ={e.info} title={e.title}/>
+     ))}
     </div>
   )
 }
