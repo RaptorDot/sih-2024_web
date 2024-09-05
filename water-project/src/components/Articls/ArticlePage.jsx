@@ -1,5 +1,4 @@
 import React from "react";
-import './ArticlePage.css'
 export default function ArticlePage({prop}) {
   const article = {
     title: "The Rise of React in Modern Web Development",
@@ -28,21 +27,25 @@ export default function ArticlePage({prop}) {
   };
   const { title, author, date, imageUrl, content } = article;
 
-  // console.log(prop)
+  console.log(prop)
   return (
-  
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-    <header className="mb-6">
-      <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg mb-4" />
-      <h1 className="text-3xl font-bold text-gray-800 mb-2">{title}</h1>
-      <p className="text-gray-600 text-sm">
-        <strong>By:</strong> {author} | <strong>Date:</strong> {date}
+    <div className="max-w-4xl mx-auto p-8 bg-gray-200 shadow-lg rounded-lg">
+    <header className="mb-8">
+      <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg shadow-lg mb-6" />
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-3">
+        {title}
+      </h1>
+      <p className="text-gray-700 text-lg">
+        <span className="font-semibold">By:</span> {author} | <span className="font-semibold">Date:</span> {date}
       </p>
     </header>
-    <article className="prose lg:prose-xl text-gray-800" dangerouslySetInnerHTML={{ __html: content }} />
-    <footer className="mt-6 border-t pt-4 text-center text-gray-600">
+    <article className="prose lg:prose-xl text-gray-800 leading-relaxed">
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </article>
+    <footer className="mt-8 border-t border-gray-300 pt-4 text-center text-gray-600">
       <p>&copy; 2024 React News</p>
     </footer>
   </div>
+  
   );
 }
