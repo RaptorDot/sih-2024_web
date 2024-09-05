@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ArticleCards(prop) {
   
-  console.log(prop)
+  // console.log(prop.id)
   return (
     <div class="w-72 h-40 flex flex-col justify-center gap-2 bg-slate-700 rounded-lg shadow p-2">
       <div class="flex gap-2">
@@ -21,9 +21,10 @@ function ArticleCards(prop) {
         </div>
       </div>
       <Link to="/articles/k">
-      <button
+      <button 
+        prop = {prop}
         class="hover:bg-purple-300 bg-neutral-50 font-bold text-indigo-500 rounded p-2"
-        onClick={readArticle}
+       
       >
         See more
       </button>

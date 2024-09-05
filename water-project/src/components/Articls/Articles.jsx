@@ -9,7 +9,7 @@ export default function Articles() {
     <div className='items-center place-items-center'>
      {useData().map((e)=>(
       <div>
-        <ArticleCards key={e.id} info ={e.info} title={e.title}/>
+        <ArticleCards key={e.id} id={e.id} info ={e.info} title={e.title}/>
         <hr/>
       </div>
      ))}
