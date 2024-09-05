@@ -1,5 +1,10 @@
 import React from "react";
-export default function ArticlePage({prop}) {
+import useData from "../Contexts/data";
+import { useLocation } from "react-router-dom";
+export default function ArticlePage() {
+  // console.log(id)
+  const location = useLocation()
+  const prop = location.state.data;
   const article = {
     title: "The Rise of React in Modern Web Development",
     author: "Jane Doe",
@@ -26,21 +31,22 @@ export default function ArticlePage({prop}) {
     `,
   };
   const { title, author, date, imageUrl, content } = article;
-
+  
   console.log(prop)
+  
   return (
     <div className="max-w-4xl mx-auto p-8 bg-gray-200 shadow-lg rounded-lg">
     <header className="mb-8">
-      <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg shadow-lg mb-6" />
+      <img src={imageUrl} alt={prop.title} className="w-full h-auto rounded-lg shadow-lg mb-6" />
       <h1 className="text-4xl font-extrabold text-gray-900 mb-3">
-        {title}
+        {prop.title}
       </h1>
       <p className="text-gray-700 text-lg">
         <span className="font-semibold">By:</span> {author} | <span className="font-semibold">Date:</span> {date}
       </p>
     </header>
     <article className="prose lg:prose-xl text-gray-800 leading-relaxed">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div dangerouslySetInnerHTML={{ __html: prop.info }} />
     </article>
     <footer className="mt-8 border-t border-gray-300 pt-4 text-center text-gray-600">
       <p>&copy; 2024 React News</p>
