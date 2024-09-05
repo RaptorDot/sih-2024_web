@@ -33,7 +33,7 @@ export default function Articles() {
       {useData().map((e)=>(
        <div key={e.id}>
        
-         <ArticleCards info ={e.info} title={e.title}/>
+         <ArticleCards info ={e.info} image={e.image} title={e.title}/>
          <hr/>
        </div>
         ))}
